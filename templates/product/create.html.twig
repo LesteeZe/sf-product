@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+
+    <title>Admin - Products</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/product">Admin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://127.0.0.1:8000/product">Products</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>New product</h1>
+    <hr>
+    <form>
+        <div class="form-group row">
+            <label for="designation" class="col-sm-2 col-form-label">Designation</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="designation">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="reference" class="col-sm-2 col-form-label">Reference</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="reference">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="brand" class="col-sm-2 col-form-label">Brand</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="brand">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="price" class="col-sm-2 col-form-label">Price</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="price">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="stock" class="col-sm-2 col-form-label">Stock</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="stock">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="active" class="col-sm-2 col-form-label">Active</label>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="active">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="description" class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="description" rows="12"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10 offset-md-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

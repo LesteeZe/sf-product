@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+
+    <title>Admin - Products</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/product">Admin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://127.0.0.1:8000/product">Products</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Product detail</h1>
+    <hr>
+    <p class="text-right">
+        <a href="http://127.0.0.1:8000/product/{{ product.id }}/update" class="btn btn-warning">Edit product</a>
+        <a href="http://127.0.0.1:8000/product/{{ product.id }}/delete" class="btn btn-danger">Delete product</a>
+    </p>
+    <table class="table table-borderless">
+        <tbody>
+        <tr>
+            <th scope="row">#</th>
+            <td>{{ product.id }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Designation</th>
+            <td>{{ product.designation }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Reference</th>
+            <td>{{ product.reference }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Brand</th>
+            <td>{{ product.brand }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Price</th>
+            <td>{{ product.price }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Stock</th>
+            <td>{{ product.stock }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Active</th>
+            <td>
+                {% if product.active %}
+                <span class="badge badge-success">Yes</span>
+                {% else %}
+                <span class="badge badge-danger">No</span>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Description</th>
+            <td>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a mi libero. Suspendisse sit amet placerat lectus. Mauris at dapibus odio, nec fringilla tortor. Sed sit amet velit massa. Donec pharetra neque id augue pretium tincidunt. Praesent sollicitudin bibendum dolor sit amet pulvinar. Suspendisse dignissim quis tellus sit amet scelerisque. Integer et purus in nisi lacinia ultricies.</p>
+                <p>Quisque et massa et nisl faucibus volutpat. Proin bibendum lectus non augue mattis, vitae cursus arcu condimentum. Vestibulum vehicula justo sit amet velit faucibus, sed rhoncus enim porta. Suspendisse at finibus sapien. Duis molestie, erat sed mattis ultricies, nisi purus efficitur ex, non hendrerit mauris metus non elit. Mauris risus mauris, fringilla id sem sed, mollis aliquam mauris. In vehicula arcu mattis fringilla pharetra. Quisque ut tortor nec odio interdum aliquet at eget odio.</p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
